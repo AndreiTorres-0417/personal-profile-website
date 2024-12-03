@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/flexbox.css?version=0.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile Web Page</title>
@@ -30,12 +31,28 @@
             margin-bottom: 20px;
         }
         h2 {
-            padding-bottom: 5px; /* Removed the border-bottom line */
+            padding-bottom: 5px; 
         }
         .picture-gallery img {
             margin: 5px;
-            width: 150px; /* Adjust image size */
-            height: auto; /* Maintain aspect ratio */
+            width: 150px; 
+            height: auto; 
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container > div {
+            background-color: #158909;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            flex: 1 1 calc(33.33% - 20px); 
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -48,6 +65,25 @@
             <h2>About Me</h2>
             <p>Welcome to my personal profile! I do not have much here but I am happy to share some surface-level information about me.</p>
         </section>
+        
+        <section id="flexbox-demo">
+            <h2>Flexbox Demo</h2>
+            <div class="flex-container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>  
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>  
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>  
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>  
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education / Achievements</h2>
             <ul>
