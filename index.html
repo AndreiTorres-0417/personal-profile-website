@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/mystyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile Web Page</title>
@@ -10,33 +9,27 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
-            color: #000;
+            background-color: #f0f0f0; 
+            color: #000; 
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #158909;
-            color: #fff;
         }
         main {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         section {
             margin-bottom: 20px;
         }
-        h2 {
-            padding-bottom: 5px; /* Removed the border-bottom line */
+        h1, h2 {
+            margin: 0 0 10px;
         }
-        .picture-gallery img {
-            margin: 5px;
-            width: 150px; /* Adjust image size */
-            height: auto; /* Maintain aspect ratio */
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -73,11 +66,9 @@
             <h2>Goals in Life / Dream</h2>
             <p>My dream is to be able to make money while enjoying the work I do, and currently I think that coding-related activities is the most fun.</p>
         </section>
-        <section id="picture-gallery" class="picture-gallery">
+        <section id="picture-gallery">
             <h2>Picture Gallery</h2>
-            <img src="photos/Feeding Al.jpg" alt="Feeding Al">
-            <img src="photos/With Dex.jpg" alt="With Dex">
-            <img src="photos/With the Boyz.jpg" alt="With the Boyz">
+            <p>(Images not displayed for simplicity in a plain design)</p>
         </section>
     </main>
 </body>
