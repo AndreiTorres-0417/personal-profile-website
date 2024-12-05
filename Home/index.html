@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/flexbox.css?version=0.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile Web Page</title>
@@ -10,49 +9,65 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
-            color: #000;
+            background-color: #f4f4f4; /* Neutral background color */
+            color: #333;
         }
+
         header {
             text-align: center;
             padding: 20px;
-            background-color: #158909;
+            background-color: #2c3e50;
             color: #fff;
         }
+
         main {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        h2 {
-            padding-bottom: 5px; 
-        }
-        .picture-gallery img {
-            margin: 5px;
-            width: 150px; 
-            height: auto; 
-        }
-        .flex-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px; /* Space between boxes */
             justify-content: center;
-            align-items: center;
         }
-        .flex-container > div {
-            background-color: #158909;
-            color: white;
+
+        .box {
+            flex: 1 1 calc(33.333% - 40px); /* Three boxes per row */
+            background: #fff;
             padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            flex: 1 1 calc(33.33% - 20px); 
-            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .picture-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 20px); /* Two boxes per row for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%; /* One box per row for mobile */
+            }
         }
     </style>
 </head>
@@ -61,59 +76,40 @@
         <h1>Personal Profile Web Page</h1>
     </header>
     <main>
-        <section id="about-me">
+        <div class="box">
             <h2>About Me</h2>
             <p>Welcome to my personal profile! I do not have much here but I am happy to share some surface-level information about me.</p>
-        </section>
-        
-        <section id="flexbox-demo">
-            <h2>Flexbox Demo</h2>
-            <div class="flex-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>  
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>  
-                <div>7</div>
-                <div>8</div>
-                <div>9</div>  
-                <div>10</div>
-                <div>11</div>
-                <div>12</div>  
-            </div>
-        </section>
-
-        <section id="education">
+        </div>
+        <div class="box">
             <h2>Education / Achievements</h2>
             <ul>
                 <li>Highschool graduate</li>
                 <li>Self-taught Unity programmer</li>
                 <li>Not much experience in advanced programming</li>
             </ul>
-        </section>
-        <section id="course">
+        </div>
+        <div class="box">
             <h2>Course</h2>
             <p>I am currently enrolled in APC Computer Science System Software Course.</p>
-        </section>
-        <section id="it-experience">
+        </div>
+        <div class="box">
             <h2>IT Experience</h2>
             <p>Not that much.</p>
-        </section>
-        <section id="hobbies">
+        </div>
+        <div class="box">
             <h2>Hobbies & Interests</h2>
             <p>Programming in Unity, playing video games, studying topics/games that interest me, and messing around with coding.</p>
-        </section>
-        <section id="goals">
+        </div>
+        <div class="box">
             <h2>Goals in Life / Dream</h2>
             <p>My dream is to be able to make money while enjoying the work I do, and currently I think that coding-related activities is the most fun.</p>
-        </section>
-        <section id="picture-gallery" class="picture-gallery">
+        </div>
+        <div class="box picture-gallery">
             <h2>Picture Gallery</h2>
             <img src="photos/Feeding Al.jpg" alt="Feeding Al">
             <img src="photos/With Dex.jpg" alt="With Dex">
             <img src="photos/With the Boyz.jpg" alt="With the Boyz">
-        </section>
+        </div>
     </main>
 </body>
 </html>
