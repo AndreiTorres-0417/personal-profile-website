@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile Web Page</title>
+
+    <!-- Link to grid.css for the grid layout -->
+    <link rel="stylesheet" href="grid.css">
+
     <style>
+        /* Non-grid related styles for the page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -40,9 +45,21 @@
     </style>
 </head>
 <body>
+
+    <!-- Grid container for layout -->
+    <div class="grid-container">
+        <!-- Grid items with corresponding grid-area classes -->
+        <div class="item1">Head</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+
     <header>
         <h1>Personal Profile Web Page</h1>
     </header>
+    
     <main>
         <section id="about-me">
             <h2>About Me</h2>
@@ -79,5 +96,6 @@
             <img src="photos/With the Boyz.jpg" alt="With the Boyz">
         </section>
     </main>
+
 </body>
 </html>
