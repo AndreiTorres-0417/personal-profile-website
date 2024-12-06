@@ -1,48 +1,49 @@
+
+Got it! If you just want the grid layout for now without the rest of the content from index.html, here’s how you can structure your files:
+
+1. grid.css (contains the grid layout styles):
+css
+Copy code
+/* grid.css */
+
+/* Grid item classes */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+/* Grid items' general style */
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+2. index.html (contains just the grid container):
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile Web Page</title>
+    <title>Grid Layout</title>
 
     <!-- Link to grid.css for the grid layout -->
     <link rel="stylesheet" href="grid.css">
-
-    <style>
-        /* Non-grid related styles for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #000;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #158909;
-            color: #fff;
-        }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        h2 {
-            padding-bottom: 5px; 
-        }
-        .picture-gallery img {
-            margin: 5px;
-            width: 150px; 
-            height: auto; 
-        }
-    </style>
 </head>
 <body>
 
@@ -55,47 +56,6 @@
         <div class="item4">Right</div>
         <div class="item5">Footer</div>
     </div>
-
-    <header>
-        <h1>Personal Profile Web Page</h1>
-    </header>
-    
-    <main>
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>Welcome to my personal profile! I do not have much here but I am happy to share some surface-level information about me.</p>
-        </section>
-        <section id="education">
-            <h2>Education / Achievements</h2>
-            <ul>
-                <li>Highschool graduate</li>
-                <li>Self-taught Unity programmer</li>
-                <li>Not much experience in advanced programming</li>
-            </ul>
-        </section>
-        <section id="course">
-            <h2>Course</h2>
-            <p>I am currently enrolled in APC Computer Science System Software Course.</p>
-        </section>
-        <section id="it-experience">
-            <h2>IT Experience</h2>
-            <p>Not that much.</p>
-        </section>
-        <section id="hobbies">
-            <h2>Hobbies & Interests</h2>
-            <p>Programming in Unity, playing video games, studying topics/games that interest me, and messing around with coding.</p>
-        </section>
-        <section id="goals">
-            <h2>Goals in Life / Dream</h2>
-            <p>My dream is to be able to make money while enjoying the work I do, and currently I think that coding-related activities is the most fun.</p>
-        </section>
-        <section id="picture-gallery" class="picture-gallery">
-            <h2>Picture Gallery</h2>
-            <img src="photos/Feeding Al.jpg" alt="Feeding Al">
-            <img src="photos/With Dex.jpg" alt="With Dex">
-            <img src="photos/With the Boyz.jpg" alt="With the Boyz">
-        </section>
-    </main>
 
 </body>
 </html>
