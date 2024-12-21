@@ -9,39 +9,60 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #000;
+            background-color: #000000;
+            color: #ffffff;
         }
         header {
             text-align: center;
             padding: 20px;
             background-color: #158909;
-            color: #fff;
+            color: #ffffff;
         }
         main {
-            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
-            background: #fff;
+            background: #1a1a1a;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
         section {
             margin-bottom: 20px;
+            width: 90%;
+            text-align: center;
         }
         h2 {
             padding-bottom: 5px; 
+            color: #00ff00;
+        }
+        .picture-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .picture-gallery img {
-            margin: 5px;
+            margin: 10px;
             width: 150px; 
             height: auto; 
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
         }
         .javascript-demo button {
             margin: 5px;
             padding: 10px 15px;
             font-size: 14px;
             cursor: pointer;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .javascript-demo button:hover {
+            background-color: #00cc00;
         }
     </style>
 </head>
@@ -50,19 +71,16 @@
         <h1>Personal Profile Web Page</h1>
     </header>
     <main>
-
         <section class="javascript-demo">
             <h2>Demo JavaScript in Body</h2>
             <p>The text in the first paragraph (index 0) is: <span id="demo-output">About Me</span></p>
-            <button onclick="changeText()">Try It</button>
-            <button onclick="resetText()">Try It</button>
+            <button>Try It</button>
+            <button>Try It</button>
         </section>
-
         <section id="about-me">
             <h2>About Me</h2>
             <p>Welcome to my personal profile! I do not have much here but I am happy to share some surface-level information about me.</p>
         </section>
-
         <section id="education">
             <h2>Education / Achievements</h2>
             <ul>
@@ -71,43 +89,28 @@
                 <li>Not much experience in advanced programming</li>
             </ul>
         </section>
-
         <section id="course">
             <h2>Course</h2>
             <p>I am currently enrolled in APC Computer Science System Software Course.</p>
         </section>
-
         <section id="it-experience">
             <h2>IT Experience</h2>
             <p>Not that much.</p>
         </section>
-
         <section id="hobbies">
             <h2>Hobbies & Interests</h2>
             <p>Programming in Unity, playing video games, studying topics/games that interest me, and messing around with coding.</p>
         </section>
-
         <section id="goals">
             <h2>Goals in Life / Dream</h2>
             <p>My dream is to be able to make money while enjoying the work I do, and currently I think that coding-related activities is the most fun.</p>
         </section>
-
         <section id="picture-gallery" class="picture-gallery">
             <h2>Picture Gallery</h2>
-            <img src="photos/Feeding Al.jpg" alt="Feeding Al">
-            <img src="photos/With Dex.jpg" alt="With Dex">
-            <img src="photos/With the Boyz.jpg" alt="With the Boyz">
+            <img src="photos/FeedingAl.jpg" alt="Feeding Al">
+            <img src="photos/WithDex.jpg" alt="With Dex">
+            <img src="photos/WithTheBoyz.jpg" alt="With the Boyz">
         </section>
     </main>
-
-    <script>
-        function changeText() {
-            document.getElementById("demo-output").innerText = "Demo in Action!";
-        }
-        
-        function resetText() {
-            document.getElementById("demo-output").innerText = "About Me";
-        }
-    </script>
 </body>
 </html>
