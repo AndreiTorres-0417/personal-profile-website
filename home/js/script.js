@@ -94,11 +94,15 @@ function changeContent(section) {
         `,
         'contact': `
             <h2>Contact</h2>
-            I am available to contact in mostly the weekday. You can reach me via my email at <strong>amtorres2@student.apc.edu.ph</strong> or in
-            facebook at <strong>https://www.facebook.com/andreiluis.torres</strong>. Whether you have a question, want to discuss an idea, or just want to get in touch, feel free to send me a message anytime. 
-            I’ll do my best to respond as quickly as possible.</p>
-
+            <p>
+        I am available to contact mostly on weekdays. You can reach me via my email at 
+        <strong>amtorres2@student.apc.edu.ph</strong> or on Facebook at 
+        <strong><a href="https://www.facebook.com/andreiluis.torres" target="_blank">https://www.facebook.com/andreiluis.torres</a></strong>.
+        Whether you have a question, want to discuss an idea, or just want to get in touch, feel free to send me a message anytime. 
+        I’ll do my best to respond as quickly as possible.
+            </p>
         `,
+
     };
 
     const sectionImages = {
