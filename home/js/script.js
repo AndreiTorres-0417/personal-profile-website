@@ -94,7 +94,7 @@ function changeContent(section) {
         `,
         'contact': `
             <h2>Contact</h2>
-            p>I am available to contact in mostly the weekday. You can reach me via my email at <strong>amtorres2@student.apc.edu.ph</strong> or in
+            I am available to contact in mostly the weekday. You can reach me via my email at <strong>amtorres2@student.apc.edu.ph</strong> or in
             facebook at <strong>https://www.facebook.com/andreiluis.torres</strong>. Whether you have a question, want to discuss an idea, or just want to get in touch, feel free to send me a message anytime. 
             I’ll do my best to respond as quickly as possible.</p>
 
