@@ -1,0 +1,50 @@
+/*Method credit to https://www.w3schools.com/css/css3_flexbox.asp/
+/* Main Content Row */
+.row {
+    display: flex; 
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+/* Columns */
+.column {
+    flex: 1;
+    margin-top: 20px;
+    height: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-column {
+    margin-top: 20px;
+    background-color: #e3f2fd;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .row {
+    flex: 1; 
+}
+
+.info-footer {
+    background-color: #d3d3d3;
+    border-top: 3px solid #007a4d;
+    text-align: center;
+    padding: 18px;
+    color: #333;
+    font-size: 16px;
+    flex-shrink: 0; 
+}
