@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webpage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+</head>
+<body>
+    <!-- Green Header -->
+    <header class="full-width-header">
+        <div class="header-content">
+            <h1>My Personal Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="changeContent('about-me'); return false;">About Me</a></li>
+                    <li><a href="#" onclick="changeContent('education'); return false;">Education</a></li>
+                    <li><a href="#" onclick="changeContent('course-and-experience'); return false;">Course and Experience</a></li>
+                    <li><a href="#" onclick="changeContent('contact'); return false;">Contact</a></li>
+                    <li><a href="#" onclick="openModal(); return false;">Survey</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Dynamic Content Section -->
+        <div class="column text-column" id="dynamic-content"></div>
+
+        <!-- Photo Gallery Section -->
+        <div class="column photo-column">
+            <h2>Photo Gallery</h2>
+            <div id="gallery-app"></div>
+        </div>
+    </div>
+
+    <!-- Survey Modal -->
+    <div id="survey-modal-container" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="survey-app">
+                <survey-form></survey-form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="info-footer">
+        <div class="info-container">
+            <div class="footer-content">
+                <h2>Why Choose Me?</h2>
+                <p>I am dedicated to eveything computer related and I willing to learn new things at any time!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
